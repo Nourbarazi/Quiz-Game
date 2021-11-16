@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;;
+    background-color: #1F1D36;
+    background-image: url("blob/blob\ \(1\).svg");
+    background-size: 350px 420px;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 3rem;
+    color: #864879;
+    z-index:1;
+    padding-bottom:20px;
+    border-bottom: 3px dashed #fff
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:700px;
+    height:500px;
+    background-color:rgba(63, 51, 81, .95);
+    padding: 0 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 1);
+}
+
+.quiz-container {
+    position: relative;
+    height: 300px;
+    width:100%;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom:10px;
+}
+
+.slide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width:100%;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity .1s;
+}
+
+.active-slide {
+    z-index: 2;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slide .question {
+    margin-bottom:40px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom:30px;
+}
+
+label input {
+    margin-right: 25px;
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:20px;
+}
+
+.btn-container button {
+    padding: 15px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+    background-color: #fff;
+    transition: .3s linear;
+    cursor: pointer;
+    z-index:3;
+}
+
+.btn-container button:hover {
+    background-color: #864879;
+    color: #fff;
+}
+
+#result {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 20px;
+    color: #E9A6A6
+}
